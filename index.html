@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7f2">
+  <meta name="description" content="A friendly JSS3 mathematics study guide with syllabus topics, worked examples, and original BECE-style practice questions.">
+  <title>Maths Made Easy | JSS3 Study Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Maths Made Easy home">
+      <span class="brand-mark" aria-hidden="true">∑</span>
+      <span>maths<span class="brand-light">made easy</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="#syllabus">Syllabus</a>
+      <a href="#practice">Practice</a>
+      <a href="#exam-practice">BECE practice</a>
+      <a class="nav-cta" href="#exam-practice">Start learning <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> YOUR JSS3 MATHEMATICS STUDY HUB</p>
+        <h1>Big maths goals.<br><span>One step at a time.</span></h1>
+        <p class="hero-description">Understand your syllabus, practise with confidence, and get ready for BECE with clear explanations made for you.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#syllabus">Explore the syllabus <span aria-hidden="true">→</span></a>
+          <a class="button button-outline" href="#exam-practice"><span class="play-icon" aria-hidden="true">▶</span> Try a practice question</a>
+        </div>
+        <div class="hero-proof">
+          <div class="avatar-stack" aria-hidden="true"><span>+</span><span>÷</span><span>π</span></div>
+          <p><strong>Learn it. Practise it. Own it.</strong><br><span>A little progress adds up.</span></p>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of mathematics notes">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="float-card float-top"><span class="float-icon">√</span><span>Square roots</span><strong>√ 144 = 12</strong></div>
+        <div class="math-sheet">
+          <div class="sheet-top"><span class="sheet-dot"></span><span class="sheet-dot"></span><span class="sheet-dot"></span><span class="sheet-label">TODAY'S NOTE</span></div>
+          <div class="sheet-equation">2x + 5 = 17</div>
+          <div class="sheet-rule"></div>
+          <div class="sheet-step"><span>01</span> Subtract 5 from both sides</div>
+          <div class="sheet-equation small-equation">2x = 12</div>
+          <div class="sheet-step"><span>02</span> Divide both sides by 2</div>
+          <div class="answer-chip">x = 6 <span>✓</span></div>
+          <div class="sheet-scribble">Nice work!</div>
+        </div>
+        <div class="float-card float-bottom"><span class="chart-icon">▥</span><span>You're making</span><strong>great progress!</strong></div>
+        <span class="art-sparkle sparkle-one">✳</span><span class="art-sparkle sparkle-two">✦</span><span class="art-sparkle sparkle-three">✧</span>
+      </div>
+    </section>
+
+    <section class="quick-stats" aria-label="Study hub features">
+      <div class="stat-item"><span class="stat-icon mint">◈</span><div><strong>6 core areas</strong><span>JSS3 syllabus guide</span></div></div>
+      <div class="stat-item"><span class="stat-icon peach">✎</span><div><strong>Worked answers</strong><span>Understand every step</span></div></div>
+      <div class="stat-item"><span class="stat-icon lavender">◎</span><div><strong>5 practice years</strong><span>Original BECE-style sets</span></div></div>
+      <div class="stat-item"><span class="stat-icon yellow">↗</span><div><strong>Learn at your pace</strong><span>Free to explore</span></div></div>
+    </section>
+
+    <section class="section syllabus-section" id="syllabus">
+      <div class="section-heading">
+        <div><p class="eyebrow">YOUR LEARNING ROADMAP</p><h2>JSS3 maths, <span>mapped out.</span></h2></div>
+        <p class="section-intro">Explore the key areas you'll meet in JSS3 and build your confidence topic by topic.</p>
+      </div>
+      <div class="topic-grid" id="topicGrid"></div>
+    </section>
+
+    <section class="practice-section" id="practice">
+      <div class="section practice-wrap">
+        <div class="section-heading practice-heading">
+          <div><p class="eyebrow">LEARN BY DOING</p><h2>Practice makes <span>progress.</span></h2></div>
+          <p class="section-intro">Pick a topic, try a question, then reveal a worked answer when you're ready.</p>
+        </div>
+        <div class="practice-toolbar">
+          <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="questionSearch" type="search" placeholder="Search a topic or question..." aria-label="Search practice questions"></label>
+          <label class="select-wrap"><span class="sr-only">Filter questions by topic</span><select id="topicFilter"><option value="all">All topics</option></select><span aria-hidden="true">⌄</span></label>
+        </div>
+        <div class="question-list" id="topicQuestions"></div>
+        <p class="empty-state" id="emptyPractice" hidden>No questions match that search. Try another word or topic.</p>
+      </div>
+    </section>
+
+    <section class="section exam-section" id="exam-practice">
+      <div class="exam-intro">
+        <div>
+          <p class="eyebrow">BECE-STYLE REVISION</p>
+          <h2>Ready to give it<br><span>a go?</span></h2>
+          <p>Choose a year and test what you know. These are original practice questions written for revision—not official past examination papers.</p>
+          <div class="exam-note"><span>✦</span> Answers include clear working, so every question is a chance to learn.</div>
+        </div>
+        <div class="exam-decoration" aria-hidden="true"><span class="decoration-circle"></span><span class="deco-symbol symbol-plus">+</span><span class="deco-symbol symbol-divide">÷</span><span class="deco-symbol symbol-pi">π</span><span class="deco-symbol symbol-equals">=</span><div class="deco-note">You<br>can do<br>this!</div></div>
+      </div>
+      <div class="year-panel">
+        <div class="year-panel-heading"><div><p class="eyebrow">PICK YOUR PRACTICE SET</p><h3>Choose a year</h3></div><span class="year-hint">Original BECE-style practice · 2022–2026</span></div>
+        <div class="year-tabs" id="yearTabs" role="tablist" aria-label="Choose a practice year"></div>
+        <div class="year-description" id="yearDescription"></div>
+        <div class="question-list exam-question-list" id="examQuestions"></div>
+        <p class="empty-state" id="emptyExam" hidden>This practice set is being prepared.</p>
+      </div>
+    </section>
+
+    <section class="closing-banner">
+      <div class="closing-mark" aria-hidden="true">✦</div>
+      <div><p class="eyebrow">EVERY EXPERT STARTED SOMEWHERE</p><h2>Keep showing up.<br><span>You're getting there.</span></h2></div>
+      <a class="button button-dark" href="#syllabus">Back to the syllabus <span aria-hidden="true">↑</span></a>
+      <span class="closing-doodle" aria-hidden="true">∑</span>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">∑</span><span>maths<span class="brand-light">made easy</span></span></a><p>Made for curious minds. Keep practising, one step at a time.</p><span>JSS3 Mathematics Study Hub</span></footer>
+</body>
+</html>
